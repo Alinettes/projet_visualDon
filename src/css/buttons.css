@@ -1,0 +1,132 @@
+:active,
+:hover,
+:focus {
+    outline: 0 !important;
+    outline-offset: 0;
+}
+
+::before,
+::after {
+    position: absolute;
+    content: "";
+}
+
+.btn-holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 10px auto 5px;
+    margin-top: -25px;
+    margin-left: 350px;
+    margin-right: 350px;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0px 25px 15px;
+    min-width: 150px;
+}
+
+.btn span {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    transition: 0.3s;
+}
+
+.btn-3 {
+    padding: 5px;
+}
+
+.btn-3 span {
+    color: rgb(255, 255, 255);
+    background-color: rgb(54, 56, 55);
+}
+
+.btn-3::before,
+.btn-3::after {
+    background: transparent;
+    z-index: 2;
+}
+
+/* Boutons graphe 1 */
+.btn.hover-border-1::before,
+.btn.hover-border-1::after {
+    width: 10%;
+    height: 25%;
+    transition: 0.35s;
+}
+
+.btn.hover-border-1::before {
+    bottom: 0;
+    left: 0;
+    border-left: 2px solid #EF1522;
+    border-bottom: 2px solid #EF1522;
+}
+
+.btn.hover-border-1::after {
+    top: 0;
+    right: -40px;
+    border-right: 2px solid #EF1522;
+    border-top: 2px solid #EF1522;
+}
+
+.btn.hover-border-1:hover::before,
+.btn.hover-border-1:hover::after {
+    width: 125%;
+    height: 96%;
+}
+
+/* Boutons graphe 2 */
+.btn-holder2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 10px auto 5px;
+    margin-top: -10px;
+    margin-left: 350px;
+    margin-right: 350px;
+}
+
+
+.btn.hover-border-2::before,
+.btn.hover-border-2::after {
+    width: 10%;
+    height: 25%;
+    transition: 0.35s;
+}
+
+.btn.hover-border-2::before {
+    bottom: 0;
+    left: 0;
+    border-left: 2px solid #140F9D;
+    border-bottom: 2px solid #140F9D;
+}
+
+.btn.hover-border-2::after {
+    top: 0;
+    right: -40px;
+    border-right: 2px solid #140F9D;
+    border-top: 2px solid #140F9D;
+}
+
+.btn.hover-border-2:hover::before,
+.btn.hover-border-2:hover::after {
+    width: 125%;
+    height: 96%;
+}

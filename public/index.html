@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>American Ninja Warrior</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap" />
+    <link href="/index.css" />
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3-scale-radial.js"></script>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="./img/American_Ninja_Warrior_Logo.png" />
+        <h1>Derrière les obstacles de Ninja Warrior</h1>
+    </header>
+    <br>
+
+    <div>
+        <p class="intro">
+            American Ninja Warrior est une émission de télé-réalité sportive américaine basée sur l'émission de
+            télé-réalité
+            japonaise Sasuke. Elle met en scène des milliers de concurrents qui tentent de franchir des séries de
+            parcours
+            d'obstacles de difficulté croissante dans différentes villes des États-Unis, dans l'espoir de se qualifier
+            pour
+            la finale nationale à Las Vegas et de devenir le "Ninja Warrior américain" de la saison. Dans le cadre de ce
+            projet,
+            je me suis focalisée sur les saisons 1 à 10. Personnelement, j'ai découvert la version française de cette
+            émission il
+            y a plusieurs années déjà et je suis retombée dessus il y a quelques mois. J'ai été étonée par la
+            performance des athlètes
+            et me suis questionnée sur les obstacles, leur potentielle évolution, réutilisation ou disparition. Vous
+            découvrez ci-dessous,
+            quelques-unes de mes analyses sur les 10 premières saisons de l'émissions aux Etats-unis.
+        </p>
+        <br><br>
+    </div>
+    <br>
+
+    <div>
+        <h3>Utilisation des obstacles phares sur les 10 saisons</h3>
+        <br>
+        <ul>
+            <li>
+                <figure><img id="warped" src="./img/WarpedWall.jpg" />
+                    <figcaption>Warped Wall</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure><img id="salmon" src="./img/SalmonLadder.jpg" />
+                    <figcaption>Salmon Ladder</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure><img id="quintuple" src="./img/QuintipuleSteps.jpg" />
+                    <figcaption>Quintuple Steps</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure><img id="jumping" src="./img/JumpingSpider.jpg" />
+                    <figcaption>Jumping Spider</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure><img id="rope" src="./img/RopeLadder.jpg" />
+                    <figcaption>Rope Ladder</figcaption>
+                </figure>
+            </li>
+        </ul>
+        <div id="barChart"></div>
+        <div class="btn-holder" id="animation">
+            <button class="btn btn-3 hover-border-1">
+                <span>Animer</span>
+            </button>
+            <button class="btn btn-3 hover-border-1" id="effacer">
+                <span>Effacer</span>
+            </button>
+        </div>
+    </div>
+    <br>
+
+    <div class="iconic">
+        <h3>Obstacle iconique de Ninja Warrior</h3>
+
+        <img class="iconic" src="./img/WarpedWall_2.jpg" />
+        <p class="iconic">
+            Le mur est un obstacle présent depuis la première saison jusqu'à la dernière. C'est certainement un des
+            obstacles des plus
+            difficile car pour réussir à le gravir, un départ en courant est presque nécessaire. Or, dans Ninja Warrior
+            il y a moins d'un
+            mètre pour prendre son élan.
+            <br><br><br>
+            Le mur présenté mesure entre 4m50 (mur normal) et 5m50 (méga mur), ce qui en fait un saut presque
+            entièrement vertical. Le mur
+            est conçu spécifiquement pour entraîner la force du haut du corps, le sprint, l'endurance, la force de saut
+            et la prise ninja.
+            <br>C'est un obstacle crucial puisque qu'il s'agit de la plupart du temps de la dernière étape pour le
+            qualifier pour la prochaine
+            phase. Un ninja pourrait réussir facilement tous les obstacles précédants mais sans réussir à gravir le mur,
+            il ne peut pas se
+            qualifier.
+        </p>
+    </div>
+    <br>
+
+    <div>
+        <h3>Nombre d'obstacles au fil des saisons</h3>
+        <p>L'émission Ninja Warrior se déroule en 3 phases : en premier la phase de qualification, en deuxième, la
+            demi-finale et en troisième
+            la finale une finale qui se déroule à Sasuke au Japon. Avec les années, elle a gagné en notoriété et le
+            nombre de participants n'a cessé d'augmenter. L'émissions a donc décidé
+            de modifier son format et de débuter par une phase de qualification région puis une finale régionale avant
+            de finir par la finale
+            nationale reprenant les vainqueurs régionaux qui se déroule à Las Vegas. Le graphique ci-dessous représente
+            le nombre d'obstacle par saison.
+        </p>
+        <div id="monSVG"></div>
+        <div id="circBarPlot"></div>
+    </div>
+
+    <div>
+        <h3>Evolution des obstacles</h3>
+        <p>Avec le graphique précédent, nous avons pu voir que l'émission a dû diviser sa phase de qualification par
+            région au vu du nombre de participant.
+            Ce n'est pas tout. Avec les années, les participants étaient de plus en plus entrainés, il a donc fallut
+            trouver d'autres manières de faire du
+            tri en phase de qualification. Je me suis donc demandé s'ils avaient cherché à développer voire compliqué
+            certains obstacles. Le graphique ci-desous
+            représente l'évolution/la déclinaison de certains obstacles entre la saison 1 et la saison 10.
+        </p>
+        <div id="dernierGraph"></div>
+        <div class="btn-holder2" id="animation2">
+            <button class="btn btn-3 hover-border-2" id="animer2">
+                <span>Animer</span>
+            </button>
+            <button class="btn btn-3 hover-border-2" id="effacer2">
+                <span>Effacer</span>
+            </button>
+        </div>
+        <!-- ['Quintuple Steps', 'Devil Steps', 'Quad Steps', 'Floating Steps', ' Archer Steps']
+        ['Salmon Ladder', 'Double Salmon ladder', 'Down Up Salmon Ladder', 'Criss Cross Salmon Ladder']
+        ['Warped Wall', 'Butterfly Wall', 'Mega Wall', 'Water Wall']
+        ['Cannonball Alley', 'Cannonball Incline', 'Cannonball drop'] -->
+    </div>
+    <footer>
+        <br>
+        Projet VisualDon | Aline Chacón | M49-2
+        <br>
+    </footer>
+</body>

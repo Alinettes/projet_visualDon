@@ -1,0 +1,29 @@
+#barChart {
+    z-index: 100;
+}
+
+#monSVG {
+    display: flex;
+    margin-left: 300px;
+    margin-top: 120px;
+}
+
+#circBarPlot {
+    display: flex;
+    margin-left: 100px;
+    margin-right: 300px;
+    margin-top: -1480px;
+    margin-bottom: -200px;
+}
+
+#barChart text {
+    font-size: 17px;
+}
+
+#barChart {
+    margin-top: 50px;
+}
+
+#dernierGraph text {
+    font-size: 17px;
+}

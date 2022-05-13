@@ -1,0 +1,50 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #556487;
+  text-align: end;
+}
+
+header {
+  display: grid;
+  color: rgb(46, 46, 46);
+  align-items: center;
+  margin-top: 0%;
+  margin-bottom: 8%;
+  height: 80px;
+}
+
+main {
+  flex-grow: 1;
+  padding: 50px 30px;
+}
+
+/* sections */
+main section {
+  flex-direction: column;
+  display: none;
+  margin: auto;
+  max-width: 1200px;
+}
+
+main section.active {
+  display: flex;
+}
+
+div.iconic {
+  margin-bottom: 120px;
+  margin-right: 80px;
+}
+
+p.iconic {
+  margin-left: 500px;
+  margin-right: 500px;
+  margin-top: 50px;
+}
+
+footer {
+  margin-top: 100px;
+}
